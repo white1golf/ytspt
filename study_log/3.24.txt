@@ -1,0 +1,57 @@
+1. 테스트 코드
+구글 클라우드의 앱 엔진을 이용하려 예제 코드 분석 중 새로 배운 부분 정리.
+코드에 테스트 코드가 함께 존재하여 잘 이해하지 못했었음.(개인적으로 테스트 코드를 
+작성해 본적이 없음.)
+
+Mocha: 자바스크립트 테스트 프레임 러너
+Code Coverage: 소프트웨어 테스트가 얼마나 충분히 이루어 졌는가를 판단하는 지표
+TDD(Test Driven Development) 라는 개념으로 기능분석 후 테스트 코드를 먼저 작성하고
+기능을 구현하는 방식의 개발 방법론이 존재. 
+
+참고:
+https://mochajs.org/
+Introduction to Testing Node.js, Nodevember, https://www.youtube.com/watch?v=u2XCdkL4bWI
+코드 커버리지, 위키백과, https://ko.wikipedia.org/wiki/%EC%BD%94%EB%93%9C_%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80
+테스트 주도 개발, 위키백과, https://ko.wikipedia.org/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8_%EC%A3%BC%EB%8F%84_%EA%B0%9C%EB%B0%9C
+
+2. Node의 require()의 동작 방식
+
+nodejs에서 테스트 주도 개발과 관련된 위에 언급된 youtube를 보던 중 
+require.cache을 이용하는 것을 봄. 테스팅 케이스별로 새로운 모듈을 불러온다는 개념(?) 이었으나 
+require이 정확히 어떻게 동작하는 지 알고 싶어 검색.
+
+전역 require() 함수는 module.require의 추상임. 이 module.require은 Module._load의 wrapper이다.
+Nodejs의 깃허브 소스코드의 lib폴더에는 nodejs에 binary로 인코딩된 내장 모듈들의 코드가 존재함. Module.js 에서 
+해당 코드를 확인 할 수 있다. 이 module 객체 내부에 _cache 오브젝트가 존재하여 require()한 파일들을 캐싱한다.
+이는 중복으로 모듈을 import하는 것을 방지할 수 있다.
+
+2.1 exports 와 module.exports의 차이
+또한 기존에 헷갈리던 exports와 module.exports에 대한 정확한 설명은 nodejs 홈페이지의
+module 부분에 자세히 설명되있다.
+기본적으로 nodejs에서 새로운 파일을 모든 파일은 module이라는 객체를 가지며 해당 객체 내부에 exports라는 객체를 가지는
+아래와 같은 가상적인 구현을 생각해볼 수 있다. 이때 exports 변수는 module.exports의 shortcut으로 동일한 역할을 하나
+exports = function 객체(); 처럼 새로운 객체를 할당해버리면 원래 본인의 역할을 잃게 된다.
+때문에 일반적으로 exports.a = ~, exports.b = ~ 와 같이 매개변수를 선언하는 형식으로 사용하며 객체나 함수를 선언할 때는
+module.exports = ~ 형태로 사용해야한다.
+즉 module.exports.a 같은 긴 문장을 줄여서 사용하려는 용도이다.
+
+function require(...) {
+  var module = { exports: {} };
+  ((module, exports) => {
+    // Your module code here. In this example, define a function.
+    function some_func() {};
+    exports = some_func;
+    // At this point, exports is no longer a shortcut to module.exports, and
+    // this module will still export an empty default object.
+    module.exports = some_func;
+    // At this point, the module will now export some_func, instead of the
+    // default object.
+  })(module, module.exports);
+  return module.exports;
+}
+-출처: Node.js v7.7.4 Documentation - Moudle, https://nodejs.org/api/modules.html
+
+참고:
+The Node.way - How 'require()' Actually Works, Fred K.Schott, http://fredkschott.com/post/2014/06/require-and-the-module-system/
+nodejs github, https://github.com/nodejs/node/blob/master/lib/module.js
+Node.js v7.7.4 Documentation - Moudle, https://nodejs.org/api/modules.html
