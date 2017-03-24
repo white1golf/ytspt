@@ -1,0 +1,35 @@
+{
+    "provider":"youtube",
+    "id":"UCziJWXHB2HIU_PvjxypjPIA",
+    "displayName":"KidsPizz",
+    
+    "_raw":"{\n \"kind\": \"youtube#channelListResponse\",\n \"etag\": \"\\\"uQc-MPTsstrHkQcRXL3IWLmeNsM/BTIRON19iY_Vuific0f_NGn7Pkw\\\"\",\n \"pageInfo\": {\n  \"totalResults\": 1,\n  \"resultsPerPage\": 1\n },\n \"items\": [\n  {\n   \"kind\": \"youtube#channel\",\n   \"etag\": \"\\\"uQc-MPTsstrHkQcRXL3IWLmeNsM/KTn37iK38jG2n2iaDdIDCyXmVXo\\\"\",\n   \"id\": \"UCziJWXHB2HIU_PvjxypjPIA\",\n   \"snippet\": {\n    \"title\": \"KidsPizz\",\n    \"description\": \"Welcome to KidsPizz!  We make colorful, entertaining videos for kids and preschool children.\\n\\nWe play with Play Doh and Slime, Kinetic Sand and make videos for learning colors and numbers. Also we open a lot of Surprise Eggs, Kinder Eggs, Kinder Joy eggs.\\n\\nPlease leave likes and subscribe our channel for more fun and creative contents!!\\n\\n*Official Site www.kidspizz.com\",\n    \"publishedAt\": \"2017-01-04T11:40:36.000Z\",\n    \"thumbnails\": {\n     \"default\": {\n      \"url\": \"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s88-c-k-no-mo-rj-c0xffffff/photo.jpg\"\n     },\n     \"medium\": {\n      \"url\": \"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s240-c-k-no-mo-rj-c0xffffff/photo.jpg\"\n     },\n     \"high\": {\n      \"url\": \"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s240-c-k-no-mo-rj-c0xffffff/photo.jpg\"\n     }\n    },\n    \"defaultLanguage\": \"en\",\n    \"localized\": {\n     \"title\": \"KidsPizz\",\n     \"description\": \"Welcome to KidsPizz!  We make colorful, entertaining videos for kids and preschool children.\\n\\nWe play with Play Doh and Slime, Kinetic Sand and make videos for learning colors and numbers. Also we open a lot of Surprise Eggs, Kinder Eggs, Kinder Joy eggs.\\n\\nPlease leave likes and subscribe our channel for more fun and creative contents!!\\n\\n*Official Site www.kidspizz.com\"\n    },\n    \"country\": \"US\"\n   }\n  }\n ]\n}\n",
+    
+    "_json":{
+        "kind":"youtube#channelListResponse",
+        "etag":"\"uQc-MPTsstrHkQcRXL3IWLmeNsM/BTIRON19iY_Vuific0f_NGn7Pkw\"",
+        "pageInfo":{"totalResults":1,"resultsPerPage":1},
+        "items":[{
+            "kind":"youtube#channel",
+            "etag":"\"uQc-MPTsstrHkQcRXL3IWLmeNsM/KTn37iK38jG2n2iaDdIDCyXmVXo\"",
+            "id":"UCziJWXHB2HIU_PvjxypjPIA",
+            "snippet":{
+                "title":"KidsPizz",
+                "description":"Welcome to KidsPizz!  We make colorful, entertaining videos for kids and preschool children.\n\nWe play with Play Doh and Slime, Kinetic Sand and make videos for learning colors and numbers. Also we open a lot of Surprise Eggs, Kinder Eggs, Kinder Joy eggs.\n\nPlease leave likes and subscribe our channel for more fun and creative contents!!\n\n*Official Site www.kidspizz.com",
+                "publishedAt":"2017-01-04T11:40:36.000Z",
+                "thumbnails":{
+                    "default":{"url":"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"},
+                    "medium":{"url":"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"},
+                    "high":{"url":"https://yt3.ggpht.com/-3XiopcyC6qE/AAAAAAAAAAI/AAAAAAAAAAA/Jdu_OanFR1c/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"}
+                    },
+                "defaultLanguage":"en",
+                "localized":{
+                    "title":"KidsPizz",
+                    "description":"Welcome to KidsPizz!  We make colorful, entertaining videos for kids and preschool children.\n\nWe play with Play Doh and Slime, Kinetic Sand and make videos for learning colors and numbers. Also we open a lot of Surprise Eggs, Kinder Eggs, Kinder Joy eggs.\n\nPlease leave likes and subscribe our channel for more fun and creative contents!!\n\n*Official Site www.kidspizz.com"
+                    },
+                "country":"US"
+            }
+        }]
+        }
+
+}
