@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="Chang San"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="manifest" href="/manifest.json">
-	<title>k-tube ranking</title>
-	<!--<link rel="stylesheet" type="text/css" href="styles/normalize.css">-->
-	<!-- 이 부분에 애플이랑 ms웹앱 관련 설정 들어감. 웹앱 관련 예제 확인. -->
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-	<div>클리꾸 히어</div>
-	<a href="/auth/youtube">히어</a>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-eqiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="Chang San">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ytspt</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header-title">service</h1>
+			<div class="user">
+				<img src="http://placehold.it/40x40" alt="thumnail">
+				<span class="login_status">log in</span>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li class="item1"><a href="#">분석자료</a></li>
+				<li class="item2"><a href="#">관심 채널</a></li>
+				<li class="item3"><a href="#">변경사항</a></li>
+				<li class="item4"><a href="#">엔딩카드 그래프</a></li>
+			</ul>
+		</nav>
+		<main class="main">
+			<ol>
+				<li class="item">
+					<div class="channel">
+						<div class="thumnail"><img src="http://placehold.it/100x100" alt="channel_thumnail"></div>
+						<div class="description">
+							<div class="name"></div>
+							<div class="sub">구독자 수: <span class="unit"></span></div>
+							<div class="total_view">총 시청자 수: <span class="unit"></span></div>
+							<div class="num_of_vids">동영상 수: <span class="unit"></span></div>
+							<div class="more"><a href="#">더보기</a></div>
+							<div class="memo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas magnam, illo, atque ullam porro ipsa, ex facilis esse a vitae libero deleniti incidunt sapiente odio pariatur quos fugiat adipisci.</div>
+						</div>
+					</div>
+				</li>
+			</ol>
+			<div class="add_channel"><a href="#"><img src="http://placehold.it/40x40" alt=""></a></div>
+		</main>
+	</body>
 </html>
