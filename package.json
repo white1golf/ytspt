@@ -5,14 +5,20 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -t [ babelify --presets [ es2015 ] ] client/src/app.js > client/scripts/bundle.js"
+    "build": "node_modules/.bin/webpack --env production",
+    "start": "node_modules/.bin/webpack-dev-server --open --env development"
   },
   "author": "장산",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.0.1"
+    "browserify": "^13.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
@@ -25,6 +31,7 @@
     "jquery": "^3.1.0",
     "mongoose": "^4.5.10",
     "morgan": "^1.8.1",
+    "normalize.css": "^6.0.0",
     "passport": "^0.3.2",
     "passport-youtube-v3": "^2.0.0"
   },
