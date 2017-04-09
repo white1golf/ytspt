@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/.bin/webpack --env production",
-    "start": "node_modules/.bin/webpack-dev-server --open --env development"
+    "start": "node_modules/.bin/webpack-dev-server --open --env development --watch-poll"
   },
   "author": "장산",
   "license": "ISC",
